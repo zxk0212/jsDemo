@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <script src="js/自适应.js"></script>
+</head>
+<body>
+    <div class="nav">
+        <p>首页</p>
+        <div class="notice">
+            <img src="images/notice.png" alt="">
+            <p>通知</p>
+        </div>
+    </div>
+    <div class="main">
+        <ul class="imgList">
+            <li class="active" style="background-image: url(images/图层1096.png);"></li>
+            <li style="background-image: url(images/1.jpg);"></li>
+            <li style="background-image: url(images/图层1096.png);"></li>
+            <li style="background-image: url(images/1.jpg);"></li>
+            <li style="background-image: url(images/图层1096.png);"></li>
+        </ul>
+        <div class="circleList">
+            <div class="circle active" id="c0"></div>
+            <div class="circle" id="c1"></div>
+            <div class="circle" id="c2"></div>
+            <div class="circle" id="c3"></div>
+            <div class="circle" id="c4"></div>
+        </div>
+    </div>
+    <script>
+        var circleList = document.querySelector('.circleList');
+        var circles = document.querySelectorAll('.circle');
+        var imgs = document.querySelectorAll('.imgList li');
+        // console.log(imgs)
+        var current = 0;
+
+        circles.forEach(function(item,i){
+            item.onclick = function(){
+                index = item.id[1];
+                // current = index;
+                render(index);
+            }
+        })
+
+        function render(index){
+            imgs.forEach(function(item,i){
+                item.classList.remove('active');
+            })
+            circles.forEach(function(item,i){
+                item.classList.remove("active");
+            })
+            circles[index].classList.add('active');
+            imgs[index].classList.add('active');
+            console.log(index);
+        }
+        
+    </script>
+    <div class="message">
+        <marquee>asdfa;sdfjlkansfjcaslkfjasln    fjaasfsafasfasdfasfslcfjsa</marquee>
+    </div>
+    <div class="middle">
+        <div class="study">
+            <div class="top">
+                <div class="left">
+                    <div class="logo"></div>
+                    <div class="mes">安全教育培训</div>
+                </div>
+                <div class="right"><a href="">></a></div>
+            </div>
+            <div class="bottom">
+                请积极参与安全教育培训哦，答题赢大奖！
+            </div>
+        </div>
+        <div class="salary">
+            <div class="top">
+                <div class="left">
+                    <div class="logo"></div>
+                    <div class="mes">我的工资</div>
+                </div>
+                <div class="right"><a href="">>更多</a></div>
+            </div>
+            <div class="detail">
+                <span class="iconfont icon-arrow-left-filling left "></span>
+                <div class="content">
+                    <div class="box">
+                        <div class="c share">
+                            <div class="date">2020-8</div>
+                            <div class="num">9000</div>
+                        </div>
+                        <div class="c share">
+                            <div class="date">2020-1</div>
+                            <div class="num">9000</div>
+                        </div>
+                        <div class="c share">
+                            <div class="date">2020-2</div>
+                            <div class="num">9000</div>
+                        </div>
+                        <div class="c">
+                            <div class="date">2020-3</div>
+                            <div class="num">9000</div>
+                        </div>
+                        <div class="c">
+                            <div class="date">2020-4</div>
+                            <div class="num">9000</div>
+                        </div>
+                        <div class="c">
+                            <div class="date">2020-5</div>
+                            <div class="num">9000</div>
+                        </div>
+                    </div>
+                </div>
+                <span class="iconfont icon-arrow-right-filling right"></span>                
+            </div>
+            <script>
+                var cs = document.querySelectorAll('.c');
+                var right = document.querySelector('.icon-arrow-right-filling');
+                var left = document.querySelector('.icon-arrow-left-filling');
+                var box = document.querySelector('.box');
+                var num = 0;
+                // console.log(right);
+                console.log(left)
+                right.onclick = function(){
+                    if(num>=3){
+                        num=3;
+                    }else{
+                        num++;
+                        // box.style.left = -(6 * num)+'rem';
+                        render(num);
+                    }
+                }
+
+                left.onclick = function(){
+                    console.log('1')
+                    if(num<=0){
+                        num=0;
+                    }else{
+                        // console.log('2')
+                        num--;
+                        // box.style.left = (6 * num)+'rem';
+                        render(num);
+                    }
+                }
+
+                function render(num){
+                    cs.forEach(function(item,i){
+                        item.classList.remove('share');
+                    })           
+                    cs[num].classList.add('share');
+                    cs[num+1].classList.add('share');
+                    cs[num+2].classList.add('share');
+                    // console.log(cs);
+                }
+            </script>
+        </div>
+    </div>
+    <div class="end">
+        <div class="index last">
+            <span class="iconfont icon-shouye"></span>
+            <p>首页</p>
+        </div>
+        <div class="experience last">
+            <span class="iconfont icon-gongzuo"></span>
+            <p>工作履历</p>
+        </div>
+        <div class="assess last">
+            <span class="iconfont icon-pingjia"></span>
+            <p>评价</p>
+        </div>
+        <div class="myself last">
+            <span class="iconfont icon-mine"></span>
+            <p>我的</p>
+        </div>
+    </div>
+</body>
+</html>

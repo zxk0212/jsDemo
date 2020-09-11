@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.nav {
+    position: relative;
+    width: 25rem;
+    height: 4rem;
+    background-color: #fafafa;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    line-height: 4rem;
+}
+
+.nav p {
+    position: absolute;
+    font-size: 2rem;
+    margin: 0 auto;
+}
+
+.notice {
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    right: 1rem;
+}
+.notice img {
+    height: 2rem;
+    width: 2rem;
+    margin-top: .5rem;
+}
+
+.notice p {
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.main{
+    position: relative;
+    width: 25rem;
+    height: 10rem;
+    margin: 0 aoto;
+}
+
+.main ul {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.imgList li {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: .5s;
+}
+
+
+
+.imgList .active {
+    /* position: absolute; */
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 1;
+}
+
+.circleList {
+    position: absolute;
+    width: 100%;
+    height: 0.5rem;
+    display: flex;
+    padding: 0 0.1rem;
+    justify-content: flex-end;
+    align-items: center;
+    left: 0;
+    bottom: .3rem;
+}
+
+.circle {
+    width: .8rem;
+    height: .8rem;
+    margin: .4rem;
+    background-color: #666;
+    border: 2px solid #ccc;
+    border-radius: .4rem;
+}
+
+.circleList .active {
+    background-color: #fff;
+}
+
+.message {
+    width: 25rem;
+    height: 3rem;
+    background-color: #fff;
+    box-shadow: .1rem .1rem .1rem .1rem 
+        rgba(44, 44, 44, 0.64);
+    line-height: 3rem;
+}
+
+.message p {
+    margin: auto 10px;
+}
+
+.middle{
+    margin: 0 auto;
+}
+
+.middle .study {
+    display: flex;
+    flex-flow: column;
+    background-color: #f7f7f7;
+    width: 22rem;
+    height: 5rem;
+    margin: 10px auto;
+}
+
+.top {
+    position: relative;
+    display: flex;
+    height: 1.5rem;
+    align-items: center;
+    justify-content: flex-start;
+    /* background-color: pink; */
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.left {
+    display: flex;
+}
+
+.study .logo {
+    width: .5rem;
+    height: .5rem;
+    background-image: url(../images/2.png);
+    background-size: .5rem .5rem;
+    background-repeat: no-repeat;
+    margin-top: .3rem;
+}
+.mes {
+    font-size: .5rem;
+    margin-left: .5rem;
+}
+
+.right {
+    position: absolute;
+    font-size: .5rem;
+    right: 1rem;
+    bottom: .2rem;
+}
+
+.bottom{
+    margin-top: .5rem;
+    font-size: .5rem;
+    margin-left: 2rem;
+}
+
+.middle .salary {
+    display: flex;
+    flex-flow: column;
+    background-color: #f7f7f7;
+    width: 22rem;
+    height: 10rem;
+    margin: 10px auto;
+}
+
+.salary .logo {
+    width: .5rem;
+    height: .5rem;
+    background-image: url(../images/3.png);
+    background-size: .5rem .5rem;
+    background-repeat: no-repeat;
+    margin-top: .3rem;
+}
+
+.detail {
+    height: 5rem;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* margin: 0 auto; */
+    position: relative;
+    /* background-color: pink; */
+}
+
+.detail .right {
+    position: absolute;
+    right: 1rem;
+    top: 2rem;
+    cursor: pointer;
+}
+
+.detail .left {
+    position: absolute;
+    left: 1rem;
+    top: 2rem;
+    cursor: pointer;
+}
+
+.content{
+    position: relative;
+    width: 18rem;
+    height: 5rem;
+    margin: 0 auto;
+    /* display: flex;
+    flex-flow: row;
+    justify-content: space-around; */
+    /* background-color: #fff; */
+}
+
+.box{
+    position: absolute;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    width: 18rem;
+    left: 0;
+}
+
+.c {
+    display: none;
+    flex-flow: column;
+    justify-content: space-evenly;
+    opacity: 0;
+    align-items: flex-start;
+    padding-left: .5rem;
+    width: 5rem;
+    height: 4rem;
+    transition: .5s;
+    background-color: #b22329;
+}
+
+.share {
+    opacity: 1;
+    display: flex;
+}
+
+.date {
+    font-size: .5rem;
+    margin-right: 1rem;
+    color: #fff;
+}
+
+.num {
+    font-size: 1rem;
+    color: #fff;
+}
+
+.end {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 4rem;
+    background-color: #f7f7f7;
+    box-shadow: 0rem 0rem 1rem 0rem 
+		rgba(44, 44, 44, 0.38);
+}
+
+.last {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.last span,
+.last p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #000;
+}
